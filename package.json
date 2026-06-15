@@ -18,5 +18,14 @@
     "express": "^5.2.1",
     "mongodb": "^7.3.0",
     "mongoose": "^9.7.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TON_NOM/gigabox-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TON_NOM/gigabox-server/issues"
+  },
+  "homepage": "https://github.com/TON_NOM/gigabox-server#readme"
 }

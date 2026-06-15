@@ -7,11 +7,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log('✅ Connexion MongoDB réussie'))
-    .catch(err => console.error('❌ Erreur MongoDB :', err));
+// Connexion locale (vérifie que ta base locale tourne sur ton PC)
+// Remplace 'gigabox_db' par le nom de ta base
+const localDB = 'mongodb://127.0.0.1:27017/gigabox_db';
 
-app.get('/', (req, res) => res.send('Serveur Gigabox en ligne'));
+mongoose.connect(localDB)
+    .then(() => console.log('✅ Connecté à MongoDB Local'))
+    .catch(err => console.error('❌ Erreur :', err));
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Serveur démarré sur le port ${PORT}`));
+app.get('/', (req, res) => res.send('Serveur local actif !'));
+
+app.listen(3000, () => console.log('🚀 Serveur local lancé sur http://localhost:3000'));
