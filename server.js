@@ -4,7 +4,7 @@ const cors = require('cors');
 
 // 1. LE FIL DE CONNEXION : On importe le modèle Forfait
 // (Si ton fichier Forfait.js est dans un dossier "models", écris : './models/Forfait')
-const Forfait = require('./Forfait');
+const Forfait = require('./forfait'); // minuscule ici !
 
 const app = express();
 app.use(cors());

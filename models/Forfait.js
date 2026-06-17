@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+// Importation du modèle (assure-toi que le chemin './Forfait' est correct)
+const Forfait = require('./forfait');
 
 const ForfaitSchema = new mongoose.Schema({
     nom: {
