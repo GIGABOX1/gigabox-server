@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const Forfait = require('./models/Forfait');
 
 const app = express();
 app.use(cors());
@@ -37,5 +38,8 @@ app.post('/api/auth/connexion', async (req, res) => {
 });
 
 // Port dynamique pour Render
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`🚀 Serveur lancé sur le port ${PORT}`));
+// Remplace ton app.listen(3000, ...) actuel par celui-ci :
+const PORT = process.env.PORT || 10000;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 Serveur lancé sur le port ${PORT}`);
+});

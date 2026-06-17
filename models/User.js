@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const User = require('./models/User');
 
 // Sous-schéma pour l'historique des activités/achats
 const ActionHistorySchema = new mongoose.Schema({
