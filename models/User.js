@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('./models/User');
+
 const Forfait = require('./models/Forfait');
 
 // Sous-schéma pour l'historique des activités/achats
